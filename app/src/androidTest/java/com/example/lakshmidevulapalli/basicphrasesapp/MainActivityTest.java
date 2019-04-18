@@ -18,10 +18,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -32,6 +36,182 @@ public class MainActivityTest {
 
     @Test
     public void mainActivityTest() {
+        ViewInteraction appCompatButton = onView(
+                allOf(withId(R.id.hello), withText("Hello"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                0),
+                        isDisplayed()));
+        appCompatButton.perform(click());
+
+        ViewInteraction appCompatButton2 = onView(
+                allOf(withId(R.id.howareyou), withText("How are you?"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                1),
+                        isDisplayed()));
+        appCompatButton2.perform(click());
+
+        ViewInteraction appCompatButton3 = onView(
+                allOf(withId(R.id.goodevening), withText("Good Evening"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                2),
+                        isDisplayed()));
+        appCompatButton3.perform(click());
+
+        ViewInteraction appCompatButton4 = onView(
+                allOf(withId(R.id.please), withText("Please"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                3),
+                        isDisplayed()));
+        appCompatButton4.perform(click());
+
+        ViewInteraction appCompatButton5 = onView(
+                allOf(withId(R.id.mynameis), withText("My name is..."),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                4),
+                        isDisplayed()));
+        appCompatButton5.perform(click());
+
+        ViewInteraction appCompatButton6 = onView(
+                allOf(withId(R.id.doyouspeakenglish), withText("Do you \nspeak English?"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                5),
+                        isDisplayed()));
+        appCompatButton6.perform(click());
+
+        ViewInteraction appCompatButton7 = onView(
+                allOf(withId(R.id.welcome), withText("Welcome"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                6),
+                        isDisplayed()));
+        appCompatButton7.perform(click());
+
+        ViewInteraction appCompatButton8 = onView(
+                allOf(withId(R.id.ilivein), withText("I live in..."),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                7),
+                        isDisplayed()));
+        appCompatButton8.perform(click());
+
+        ViewInteraction appCompatButton9 = onView(
+                allOf(withId(R.id.welcome), withText("Welcome"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                6),
+                        isDisplayed()));
+        appCompatButton9.perform(click());
+
+        ViewInteraction appCompatButton10 = onView(
+                allOf(withId(R.id.doyouspeakenglish), withText("Do you \nspeak English?"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                5),
+                        isDisplayed()));
+        appCompatButton10.perform(click());
+
+        ViewInteraction appCompatButton11 = onView(
+                allOf(withId(R.id.mynameis), withText("My name is..."),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                4),
+                        isDisplayed()));
+        appCompatButton11.perform(click());
+
+        ViewInteraction appCompatButton12 = onView(
+                allOf(withId(R.id.please), withText("Please"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                3),
+                        isDisplayed()));
+        appCompatButton12.perform(click());
+
+        ViewInteraction appCompatButton13 = onView(
+                allOf(withId(R.id.goodevening), withText("Good Evening"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                2),
+                        isDisplayed()));
+        appCompatButton13.perform(click());
+
+        ViewInteraction appCompatButton14 = onView(
+                allOf(withId(R.id.howareyou), withText("How are you?"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                1),
+                        isDisplayed()));
+        appCompatButton14.perform(click());
+
+        ViewInteraction appCompatButton15 = onView(
+                allOf(withId(R.id.hello), withText("Hello"),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                0),
+                        isDisplayed()));
+        appCompatButton15.perform(click());
+
+        ViewInteraction appCompatButton16 = onView(
+                allOf(withId(R.id.ilivein), withText("I live in..."),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                0)),
+                                7),
+                        isDisplayed()));
+        appCompatButton16.perform(click());
+
         ViewInteraction button = onView(
                 allOf(withId(R.id.hello),
                         childAtPosition(
@@ -44,39 +224,6 @@ public class MainActivityTest {
         button.check(matches(isDisplayed()));
 
         ViewInteraction button2 = onView(
-                allOf(withId(R.id.goodevening),
-                        childAtPosition(
-                                allOf(withId(R.id.gridLayout),
-                                        childAtPosition(
-                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
-                                                0)),
-                                2),
-                        isDisplayed()));
-        button2.check(matches(isDisplayed()));
-
-        ViewInteraction button3 = onView(
-                allOf(withId(R.id.mynameis),
-                        childAtPosition(
-                                allOf(withId(R.id.gridLayout),
-                                        childAtPosition(
-                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
-                                                0)),
-                                4),
-                        isDisplayed()));
-        button3.check(matches(isDisplayed()));
-
-        ViewInteraction button4 = onView(
-                allOf(withId(R.id.welcome),
-                        childAtPosition(
-                                allOf(withId(R.id.gridLayout),
-                                        childAtPosition(
-                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
-                                                0)),
-                                6),
-                        isDisplayed()));
-        button4.check(matches(isDisplayed()));
-
-        ViewInteraction button5 = onView(
                 allOf(withId(R.id.howareyou),
                         childAtPosition(
                                 allOf(withId(R.id.gridLayout),
@@ -85,9 +232,20 @@ public class MainActivityTest {
                                                 0)),
                                 1),
                         isDisplayed()));
-        button5.check(matches(isDisplayed()));
+        button2.check(matches(isDisplayed()));
 
-        ViewInteraction button6 = onView(
+        ViewInteraction button3 = onView(
+                allOf(withId(R.id.goodevening),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
+                                                0)),
+                                2),
+                        isDisplayed()));
+        button3.check(matches(isDisplayed()));
+
+        ViewInteraction button4 = onView(
                 allOf(withId(R.id.please),
                         childAtPosition(
                                 allOf(withId(R.id.gridLayout),
@@ -96,9 +254,20 @@ public class MainActivityTest {
                                                 0)),
                                 3),
                         isDisplayed()));
-        button6.check(matches(isDisplayed()));
+        button4.check(matches(isDisplayed()));
 
-        ViewInteraction button7 = onView(
+        ViewInteraction button5 = onView(
+                allOf(withId(R.id.mynameis),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
+                                                0)),
+                                4),
+                        isDisplayed()));
+        button5.check(matches(isDisplayed()));
+
+        ViewInteraction button6 = onView(
                 allOf(withId(R.id.doyouspeakenglish),
                         childAtPosition(
                                 allOf(withId(R.id.gridLayout),
@@ -106,6 +275,17 @@ public class MainActivityTest {
                                                 IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
                                                 0)),
                                 5),
+                        isDisplayed()));
+        button6.check(matches(isDisplayed()));
+
+        ViewInteraction button7 = onView(
+                allOf(withId(R.id.welcome),
+                        childAtPosition(
+                                allOf(withId(R.id.gridLayout),
+                                        childAtPosition(
+                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
+                                                0)),
+                                6),
                         isDisplayed()));
         button7.check(matches(isDisplayed()));
 

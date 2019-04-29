@@ -27,25 +27,6 @@ android {
     }
 }
 
-buildscript{
-    repositories{
-        jcenter()
-    }
-    dependencies{
-        classpath 'com.genymotion:plugin:1.4'
-    }
-}
-
-apply plugin: "genymotion"
-
-genymotion {
-    devices {
-        nexus5 {
-            template "Google Nexus 5 - 4.4.4 - API 19 - 1080x1920"
-        }
-    }
-}
-
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'

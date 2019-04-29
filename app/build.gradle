@@ -1,4 +1,14 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.genymotion:plugin:1.4'
+    }
+}
+
 apply plugin: 'com.android.application'
+apply plugin: 'genymotion'
 
 android {
     //signingConfigs {
@@ -38,4 +48,15 @@ dependencies {
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.android.support:support-annotations:24.0.0'
     androidTestImplementation 'com.android.support.test:runner:0.5'
+}
+
+genymotion {
+    config {
+        genymotionPath = '/var/lib/jenkins/genymotion/'
+    }
+    devices {
+        nexus5 {
+            template "Google Nexus 5 - 4.4.4 - API 19 - 1080x1920"
+        }
+    }
 }

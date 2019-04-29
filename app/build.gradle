@@ -40,7 +40,7 @@ apply plugin: "genymotion"
 
 genymotion {
         config {
-            genymotionPath = "/home/ec2-user/genymotion/"
+            genymotionPath = "/var/lib/jenkins/genymotion/"
         }
 
         //Cloud device

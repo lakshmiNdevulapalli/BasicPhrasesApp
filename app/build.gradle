@@ -1,14 +1,14 @@
-//buildscript {
-  //  repositories {
-    //    jcenter()
-    //}
-    //dependencies {
-      //  classpath 'com.genymotion:plugin:1.4'
-    //}
-//}
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.genymotion:plugin:1.4'
+    }
+}
 
 apply plugin: 'com.android.application'
-//apply plugin: 'genymotion'
+apply plugin: 'genymotion'
 
 android {
     //signingConfigs {
@@ -50,13 +50,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:0.5'
 }
 
-//genymotion {
-  //  config {
-    //    genymotionPath = '/var/lib/jenkins/genymotion/'
-    //}
-    //cloudDevices{
-    //nexus5 {
-      //template "Google Nexus 5 - 4.4.4 - API 19 - 1080x1920"
-    //}
-  //}
-//}
+genymotion {
+    config {
+        genymotionPath = '/var/lib/jenkins/genymotion/'
+    }
+    cloudDevices{
+    nexus5 {
+      template "Google Nexus 5 - 4.4.4 - API 19 - 1080x1920"
+    }
+  }
+}
